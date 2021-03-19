@@ -1,43 +1,22 @@
 import React from "react";
-import { Route, NavLink, Redirect } from "react-router-dom";
-import { CSSCourses, HTMLCourses, JSCourses } from "../data/courses";
+import { Route, NavLink } from "react-router-dom";
+import { HTMLCourses } from "../data/task";
 import CourseContainer from "./courses/CourseContainer";
 
 const Courses = ({ match }) => (
   <div className="main-content courses">
     <div className="course-header group">
-      <h2>Courses</h2>
+      <h2>Task/Quest</h2>
       <ul className="course-nav">
         <li>
-          <NavLink to={`${match.url}/html`}>HTML</NavLink>
-        </li>
-        <li>
-          <NavLink to={`${match.url}/css`}>CSS</NavLink>
-        </li>
-        <li>
-          <NavLink to={`${match.url}/javascript`}>JavaScript</NavLink>
+          <NavLink to={`${match.url}`}>HTML</NavLink>
         </li>
       </ul>
     </div>
-
     {console.log(match)}
-
     <Route
-      exact
-      path={match.path}
-      render={() => <Redirect to={`${match.path}/html`} />}
-    />
-    <Route
-      path={`${match.path}/html`}
+      path={`${match.path}`}
       render={() => <CourseContainer data={HTMLCourses} />}
-    />
-    <Route
-      path={`${match.path}/css`}
-      render={() => <CourseContainer data={CSSCourses} />}
-    />
-    <Route
-      path={`${match.path}/javascript`}
-      render={() => <CourseContainer data={JSCourses} />}
     />
   </div>
 );

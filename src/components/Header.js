@@ -18,10 +18,10 @@ const Header = () => (
         </NavLink>
       </li>
       <li>
-        <NavLink to="/teachers">Teachers</NavLink>
+        <NavLink to="/character">Character</NavLink>
       </li>
       <li>
-        <NavLink to="/courses">Courses</NavLink>
+        <NavLink to="/courses">Task/ Quest</NavLink>
       </li>
     </ul>
   </header>

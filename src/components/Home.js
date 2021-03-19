@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 
 class Home extends Component {
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
-    let teacherTopic = this.topic.value;
-    let teacherName = this.name.value;
-    let path = `teachers/${teacherTopic}/${teacherName}`;
-    this.props.history.push(path);
+    let enrollKey = this.enrollKey.value;
   };
   render() {
     return (
@@ -28,19 +25,14 @@ class Home extends Component {
           the latest on web technology so you will never fall behind.
         </p>
         <hr />
-        <h3>Featured Teachers</h3>
+        <h3>Assign classroom:</h3>
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
-            placeholder="Name"
-            ref={input => (this.name = input)}
+            placeholder="Enroll Key"
+            ref={(input) => (this.enrollKey = input)}
           />
-          <input
-            type="text"
-            placeholder="Topic"
-            ref={input => (this.topic = input)}
-          />
-          <button type="submit">Go!</button>
+          <button type="submit">Enroll me!</button>
         </form>
       </div>
     );
