@@ -13,15 +13,15 @@ const Header = () => (
         </NavLink>
       </li>
       <li>
-        <NavLink to="/about" activeStyle={{ background: "tomato" }}>
+        <NavLink to="/about" activeStyle={{ background: "#FF8066" }}>
           About
         </NavLink>
       </li>
       <li>
-        <NavLink to="/character">Character</NavLink>
+        <NavLink to="/character" activeStyle={{ background: "#4D8076" }}>Character</NavLink>
       </li>
       <li>
-        <NavLink to="/courses">Task/ Quest</NavLink>
+        <NavLink to="/courses" activeStyle={{ background: "#00C9A7" }}>Task/ Quest</NavLink>
       </li>
     </ul>
   </header>

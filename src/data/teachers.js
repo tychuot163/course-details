@@ -1,4 +1,4 @@
-const TeacherList = [
+const CharactersList = [
   {
     name: "Angie McAngular",
     bio:
@@ -49,4 +49,4 @@ const TeacherList = [
   }
 ];
 
-export default TeacherList;
+export default CharactersList;

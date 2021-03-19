@@ -7,12 +7,12 @@ class Home extends Component {
   };
   render() {
     return (
-      <div className="main-content home">
-        <h2>Front End Course Directory</h2>
-        <p>
-          This fun directory is a project for the <em>React Router Basics</em>{" "}
-          course on Treehouse.
+      <div className="main-content home-background">
+        <h1 style={{color:'#0089BA'}}>Front End Course Directory</h1>
+        <p style={{fontSize:'30px'}} className='home-header'>
+          Tutorials
         </p>
+        <div className='home-content'>
         <p>
           Learn front end web development and much more! This simple directory
           app offers a preview of our course library. Choose from many hours of
@@ -24,9 +24,13 @@ class Home extends Component {
           and front end development. Our library is continually refreshed with
           the latest on web technology so you will never fall behind.
         </p>
+        </div>
         <hr />
-        <h3>Assign classroom:</h3>
+        <div className='home-content' style={{width:'600px', margin:'auto'}}>
         <form onSubmit={this.handleSubmit}>
+          <label style={{padding:'10px'}}>
+            Assign to classroom:   
+          </label>
           <input
             type="text"
             placeholder="Enroll Key"
@@ -34,6 +38,7 @@ class Home extends Component {
           />
           <button type="submit">Enroll me!</button>
         </form>
+        </div>
       </div>
     );
   }
