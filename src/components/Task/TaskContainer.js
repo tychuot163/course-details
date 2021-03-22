@@ -1,10 +1,10 @@
 import React from "react";
-import Course from "./Course";
+import Task from "./Task";
 
-const CourseContainer = ({ data }) => {
+const TaskContainer = ({ data }) => {
   let courses = data.map(course => {
     return (
-      <Course
+      <Task
         title={course.title}
         desc={course.description}
         img={course.img_src}
@@ -19,4 +19,4 @@ const CourseContainer = ({ data }) => {
   );
 };
 
-export default CourseContainer;
+export default TaskContainer;

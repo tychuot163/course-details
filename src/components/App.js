@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import Header from "./Header";
 import About from "./About";
-import Courses from "./Courses";
+import Tasks from "./Tasks";
 import Teachers from "./Characters";
 import NotFound from "./NotFound";
 const App = () => (
@@ -12,7 +12,7 @@ const App = () => (
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/courses" component={Courses} />
+        <Route path="/courses" component={Tasks} />
         <Route exact path="/character" component={Teachers} />
         <Route path="/about" render={() => <About title="About this site" />} />
         <Route render={() => <NotFound />} />
